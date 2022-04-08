@@ -110,7 +110,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/scatter/tribeam/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/tribeam/hitscan
 	pellets = 3
-	variance = 45
+	variance = 18
 	select_name = "tribeam"
 	e_cost = 200 //10 shots
 
@@ -166,7 +166,11 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/lasgun/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/lasgun/hitscan
 	e_cost = 80 //25 shots, as per FNV
-
+	
+/obj/item/ammo_casing/energy/laser/lasgun/hitscan/focused
+	projectile_type = /obj/item/projectile/beam/laser/lasgun/hitscan/focused
+	e_cost = 400 //5 shots
+	
 /obj/item/ammo_casing/energy/laser/solar
 	projectile_type = /obj/item/projectile/beam/laser/solar
 	e_cost = 30 //basically infinite shots

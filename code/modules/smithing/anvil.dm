@@ -47,7 +47,7 @@
 	var/rng = FALSE
 	var/debug = FALSE //vv this if you want an artifact
 	var/artifactrolled = FALSE
-	var/itemqualitymax = 20
+	var/itemqualitymax = 8
 	var/list/smithrecipes = list(RECIPE_HAMMER = /obj/item/smithing/hammerhead,
 	RECIPE_SCYTHE = /obj/item/smithing/scytheblade,
 	RECIPE_SHOVEL = /obj/item/smithing/shovelhead,
@@ -275,22 +275,22 @@
 	custom_materials = list(/datum/material/bronze=8000)
 	icon_state = "ratvaranvil"
 	anvilquality = 0
-	itemqualitymax = 4
+	itemqualitymax = 6
 
 /obj/structure/anvil/obtainable/sandstone
 	name = "sandstone brick anvil"
 	desc = "A big block of sandstone. Useable as an anvil."
 	custom_materials = list(/datum/material/sandstone=8000)
 	icon_state = "sandvil"
-	anvilquality = -0.5
-	itemqualitymax = 3
+	anvilquality = -1
+	itemqualitymax = 4
 
 /obj/structure/anvil/obtainable/basalt
 	name = "basalt brick anvil"
 	desc = "A big block of basalt. Useable as an anvil, better than sandstone. Igneous!"
 	icon_state = "sandvilnoir"
-	anvilquality = -0.5
-	itemqualitymax = 4
+	anvilquality = -1
+	itemqualitymax = 8
 
 /obj/structure/anvil/obtainable/basic
 	name = "anvil"
@@ -305,7 +305,6 @@
 	icon_state = "ratvaranvil"
 	anvilquality = 1
 	itemqualitymax = 8
-
 /obj/structure/anvil/obtainable/ratvar/attackby(obj/item/I, mob/user)
 	if(is_servant_of_ratvar(user))
 		return ..()

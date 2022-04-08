@@ -255,8 +255,8 @@
 			patient.visible_message("<span class='nicegreen'>[patient]'s body rapidly absorbs moisture from the enviroment, taking on a more healthy appearance.")
 
 /datum/reagent/medicine/spaceacillin
-	name = "Spaceacillin"
-	description = "Spaceacillin will prevent a patient from conventionally spreading any diseases they are currently infected with. Also reduces infection in serious burns."
+	name = "Penicillin"
+	description = "Penicillin will prevent a patient from conventionally spreading any diseases they are currently infected with. Also reduces infection in serious burns."
 	color = "#f2f2f2"
 	metabolization_rate = 0.1 * REAGENTS_METABOLISM
 	pH = 8.1
@@ -433,6 +433,7 @@
 	reagent_state = LIQUID
 	color = "#6D6374"
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
+	overdose_threshold = 60
 	pH = 2.6
 	value = REAGENT_VALUE_COMMON
 
@@ -443,6 +444,11 @@
 	C.adjustStaminaLoss(-0.5*REM, 0)
 	..()
 	return TRUE
+
+/datum/reagent/medicine/mine_salve/overdose_process(mob/living/M)
+	M.adjustToxLoss(2*REM, FALSE)
+	..()
+	. = 1
 
 /datum/reagent/medicine/mine_salve/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
 	if(iscarbon(M) && M.stat != DEAD)

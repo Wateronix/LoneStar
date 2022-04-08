@@ -5,9 +5,19 @@
 	projectile_type = /obj/item/projectile/bullet/reusable/arrow
 	caliber = "arrow"
 	icon_state = "arrow"
+	custom_materials = list(/datum/material/iron = 500)
 	throwforce = 8 //good luck hitting someone with the pointy end of the arrow
 	throw_speed = 3
-	w_class = 3
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/ammo_casing/caseless/arrow/cheap
+	name = "cheap arrow"
+	desc = "A cheap, small, lightweight arrow made from wood. Not as effective against armor."
+	projectile_type = /obj/item/projectile/bullet/reusable/arrow/cheap
+	icon_state = "cheaparrow"
+	throwforce = 6
+	custom_materials = list(/datum/material/wood = 500)
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/ammo_casing/caseless/arrow/ap
 	name = "sturdy arrow"
@@ -27,6 +37,20 @@
 	projectile_type = /obj/item/projectile/bullet/reusable/arrow/burning
 	icon_state = "arrow_burning"
 
+/obj/item/ammo_casing/caseless/arrow/broadhead
+	name = "broadhead arrow"
+	desc = "A sharp metal arrow with a broad head. Likely to stick in a wound."
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "arrow_broadhead"
+	projectile_type = /obj/item/projectile/bullet/reusable/arrow/broadhead
+
+/obj/item/ammo_casing/caseless/arrow/serrated
+	name = "serrated arrow"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	desc = "A sharp metal arrow with a wicked sharp serrated teeth. Likely to shred an artery."
+	icon_state = "arrow_serrated"
+	projectile_type = /obj/item/projectile/bullet/reusable/arrow/serrated
+
 //CIT ARROWS
 /obj/item/ammo_casing/caseless/arrow/wood
 	name = "wooden arrow"
@@ -40,7 +64,7 @@
 
 /obj/item/ammo_casing/caseless/arrow/bone
 	name = "bone arrow"
-	desc = "An arrow made of bone and sinew. The tip is sharp enough to pierce through a goliath plate."
+	desc = "An arrow made of bone and sinew. The tip is sharp enough to pierce through deathclaw hide."
 	icon_state = "bonearrow"
 	projectile_type = /obj/item/projectile/bullet/reusable/arrow/bone
 
@@ -49,3 +73,10 @@
 	desc = "An arrow made of wood, tipped with bronze. The tip is dense enough to provide some armor penetration."
 	icon_state = "bronzearrow"
 	projectile_type = /obj/item/projectile/bullet/reusable/arrow/bronze
+	
+/obj/item/ammo_casing/caseless/arrow/explosive
+	name = "explosive arrow"
+	desc = "An arrow with a pressure-activated explosive charge at the end. Cannot be reused."
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "arrow_explosive"
+	projectile_type = /obj/item/projectile/bullet/reusable/arrow/explosive

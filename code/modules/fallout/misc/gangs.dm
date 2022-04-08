@@ -46,6 +46,7 @@ GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 		/datum/gang_item/weapon/type17,
 		/datum/gang_item/weapon/uzi,
 		/datum/gang_item/weapon/type93,
+		/datum/gang_item/equipment/frag,
 
 		/datum/gang_item/clothing/prostitute_dress,
 		/datum/gang_item/clothing/hat,
@@ -79,12 +80,14 @@ GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 		/datum/gang_item/clothing/khan_peltboots,
 		/datum/gang_item/clothing/khan_bandana,
 		/datum/gang_item/clothing/khan_helmet,
+		/datum/gang_item/clothing/khan_fullhelmet,
 		/datum/gang_item/clothing/khan_uniform,
 		/datum/gang_item/clothing/khan_jacket_armored,
 		/datum/gang_item/clothing/khan_battlecoat,
 
 		/datum/gang_item/equipment/c4,
 		/datum/gang_item/equipment/emp,
+		/datum/gang_item/equipment/frag,
 
 		/datum/gang_item/weapon/shuriken,
 		/datum/gang_item/equipment/necklace,

@@ -93,6 +93,11 @@
 	path = /obj/item/clothing/shoes/f13/military 
 	cost = 2
 
+/datum/gear/shoes/serviceboots
+	name = "service boots"
+	path = /obj/item/clothing/shoes/f13/military/serviceboots
+	cost = 2
+
 /datum/gear/shoes/leather
 	name = "leather combat boots"
 	path = /obj/item/clothing/shoes/f13/military/leather 
@@ -129,3 +134,10 @@
 							"NCR Rear Echelon",
 							"NCR Off-Duty"
 						)
+
+/datum/gear/shoes/khan_peltboots
+	name = "Great Khan pelt boots"
+	path = /obj/item/clothing/shoes/f13/military/khan_pelt
+	cost = 2
+	restricted_desc = "KHAN"
+	restricted_roles = list("Great Khan")

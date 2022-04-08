@@ -148,6 +148,14 @@
 	max_ammo = 50
 	multiple_sprites = 2
 
+/obj/item/ammo_box/magazine/m473
+	name = "g11 magazine (4.73mm)"
+	icon_state = "473mm"
+	caliber = "473mm"
+	ammo_type = /obj/item/ammo_casing/caseless/g11
+	max_ammo = 50
+	multiple_sprites = 2
+
 /obj/item/ammo_box/magazine/m473/explosive
 	name = "g11 magazine (4.73mm explosive)"
 	icon_state = "473mm"
@@ -158,3 +166,25 @@
 
 /obj/item/ammo_box/magazine/m473/empty
 	start_empty = 1
+
+/obj/item/ammo_box/magazine/m473/small
+	name = "4.7mm carbine magazine"
+	icon_state = "46x30mmtA"
+	max_ammo = 20
+
+/obj/item/ammo_box/magazine/m473/small/empty
+	start_empty = 1
+
+/obj/item/ammo_box/magazine/m2mm
+	name = "2mm electromagnetic magazine"
+	icon_state = "2mm"
+	ammo_type = /obj/item/ammo_casing/c2mm
+	caliber = "2mm"
+	max_ammo = 10
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/m2mm/blender
+	name = "2mm \"Blender\" electromagnetic magazine"
+	ammo_type = /obj/item/ammo_casing/c2mm/blender
+	max_ammo = 10
+	multiple_sprites = 2

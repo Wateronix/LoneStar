@@ -34,6 +34,10 @@
 /datum/gear/head/beret
 	name = "black beret"
 	path = /obj/item/clothing/head/beret/black
+	
+/datum/gear/head/medicalberet
+	name = "medical beret"
+	path = /obj/item/clothing/head/beret/med
 
 /datum/gear/head/flatcap
 	name = "flat cap"
@@ -382,3 +386,17 @@ datum/gear/head/steelpot_bandolier
 	restricted_roles = list("NCR Sergeant",
 							"NCR Heavy Trooper"
 						)
+
+/datum/gear/head/khan_bandana
+	name = "Great Khan bandana"
+	path = /obj/item/clothing/head/helmet/f13/khan/bandana
+	cost = 2
+	restricted_desc = "KHAN"
+	restricted_roles = list("Great Khan")
+
+/datum/gear/head/khan_furtrimmed
+	name = "Great Khan fur-trimmed helmet"
+	path = /obj/item/clothing/head/helmet/f13/khan/pelt
+	cost = 2
+	restricted_desc = "KHAN"
+	restricted_roles = list("Great Khan")

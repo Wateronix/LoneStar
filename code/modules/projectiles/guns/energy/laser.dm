@@ -206,7 +206,7 @@
 	fire_delay = 0
 	slowdown = 0.2
 	w_class = WEIGHT_CLASS_NORMAL
-	weapon_weight = WEAPON_LIGHT
+	weapon_weight = WEAPON_MEDIUM
 	slot_flags = ITEM_SLOT_BELT
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/wattz/hitscan)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
@@ -227,8 +227,9 @@
 	can_remove = 0
 	can_charge = 0
 	selfcharge = 1
+	icon_state = "rechargerpistol"
 	w_class = WEIGHT_CLASS_SMALL
-	weapon_weight = WEAPON_LIGHT
+	weapon_weight = WEAPON_MEDIUM
 	slot_flags = ITEM_SLOT_BELT
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/recharger/hitscan)
 	cell_type = /obj/item/stock_parts/cell/ammo/breeder
@@ -242,7 +243,7 @@
 	icon_state = "AEP7"
 	item_state = "laser-pistol"
 	w_class = WEIGHT_CLASS_NORMAL
-	weapon_weight = WEAPON_LIGHT
+	weapon_weight = WEAPON_MEDIUM
 	slot_flags = ITEM_SLOT_BELT
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/hitscan)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
@@ -335,7 +336,7 @@
 	zoom_out_amt = 13
 	equipsound = 'sound/f13weapons/equipsounds/aer14equip.ogg'
 
-//Wattz 2000 Extended 
+//Wattz 2000 Extended
 /obj/item/gun/energy/laser/wattz2k/extended
 	name = "wattz 2000e"
 	desc = "This Wattz 2000 laser rifle has had its recharging system upgraded and a special recycling chip installed that reduces the drain on the micro fusion cell by 50%."
@@ -350,7 +351,7 @@
 	zoom_amt = 10
 	zoom_out_amt = 13
 	equipsound = 'sound/f13weapons/equipsounds/aer14equip.ogg'
-	
+
 
 
 //AER9 Laser rifle
@@ -366,6 +367,12 @@
 	scope_x_offset = 12
 	scope_y_offset = 20
 	equipsound = 'sound/f13weapons/equipsounds/aer9equip.ogg'
+	
+/obj/item/gun/energy/laser/aer9/oasis
+	name = "\improper Hot-wired AER9 laser rifle"
+	desc = "A sturdy pre-war laser rifle. Emits beams of concentrated light to kill targets. This one has been jury-rigged against common sense to dump more power into its shots."
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun/hitscan/focused)
+	fire_delay = 5
 
 //Ultracite Laser rifle
 /obj/item/gun/energy/laser/ultra_rifle
@@ -444,7 +451,10 @@
 	icon_state = "lasercw"
 	item_state = "rcw"
 	fire_delay = 3
-	burst_size = 2
+	burst_size = 1
+	automatic = 1
+	autofire_shot_delay = 2
+	spread = 14
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rcw/hitscan)
 	cell_type = /obj/item/stock_parts/cell/ammo/ecp
 	equipsound = 'sound/f13weapons/equipsounds/RCWequip.ogg'
@@ -462,106 +472,6 @@
 	return
 
 
-
-//////////////////
-//PLASMA WEAPONS//
-//////////////////
-
-
-//Plasma pistol
-/obj/item/gun/energy/laser/plasma/pistol
-	name ="plasma pistol"
-	slowdown = 0.2
-	item_state = "plasma-pistol"
-	icon_state = "plasma-pistol"
-	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires a bolt of superhot ionized gas."
-	w_class = WEIGHT_CLASS_NORMAL
-	weapon_weight = WEAPON_LIGHT
-	slot_flags = ITEM_SLOT_BELT
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol)
-	cell_type = /obj/item/stock_parts/cell/ammo/ec
-	equipsound = 'sound/f13weapons/equipsounds/pistolplasequip.ogg'
-	
-/obj/item/gun/energy/laser/plasma/pistol/worn
-	name ="shoddy plasma pistol"
-	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires a bolt of superhot ionized gas. This one's internal parts have loose seals and corroded electronics."
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/worn)
-	fire_delay = 4.5
-	
-//Glock 86 Plasma pistol
-/obj/item/gun/energy/laser/plasma/glock
-	name = "glock 86"
-	desc = "Glock 86 Plasma Pistol. Designed by the Gaston Glock artificial intelligence. Shoots a small bolt of superheated plasma. Powered by a small energy cell."
-	item_state = "plasma-pistol"
-	icon_state = "glock86"
-	slowdown = 0.2
-	w_class = WEIGHT_CLASS_NORMAL
-	weapon_weight = WEAPON_HEAVY
-	slot_flags = ITEM_SLOT_BELT
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/glock)
-	equipsound = 'sound/f13weapons/equipsounds/pistolplasequip.ogg'
-	cell_type = /obj/item/stock_parts/cell/ammo/ec
-
-//Glock 86 A Plasma pistol
-/obj/item/gun/energy/laser/plasma/glock/extended
-	name ="glock 86a"
-	item_state = "plasma-pistol"
-	icon_state = "glock86a"
-	desc = "This Glock 86 plasma pistol has had its magnetic housing chamber realigned to reduce the drain on its energy cell. Its efficiency has doubled, allowing it to fire more shots before the battery is expended."
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/glock/extended)
-	cell_type = /obj/item/stock_parts/cell/ammo/ec
-
-
-//Plasma Rifle
-/obj/item/gun/energy/laser/plasma
-	name ="plasma rifle"
-	item_state = "plasma"
-	icon_state = "plasma"
-	fire_delay = 4.5
-	desc = "A miniaturized plasma caster that fires bolts of magnetically accelerated toroidal plasma towards an unlucky target."
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
-	cell_type = /obj/item/stock_parts/cell/ammo/mfc
-	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
-
-
-//Plasma carbine
-/obj/item/gun/energy/laser/plasma/carbine
-	name ="plasma carbine"
-	item_state = "plasma"
-	icon_state = "plasmacarbine"
-	desc = "A burst-fire energy weapon that fires a steady stream of toroidal plasma towards an unlucky target."
-	ammo_type = list(/obj/item/ammo_casing/energy/plasmacarbine)
-	cell_type = /obj/item/stock_parts/cell/ammo/mfc
-	burst_size = 2
-	burst_shot_delay = 1.5
-	actions_types = list(/datum/action/item_action/toggle_firemode)
-	can_scope = TRUE
-	scope_state = "plasma_scope"
-	scope_x_offset = 13
-	scope_y_offset = 16
-	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
-
-/obj/item/gun/energy/laser/plasma/carbine/enable_burst()
-	. = ..()
-	spread = 15
-
-/obj/item/gun/energy/laser/plasma/carbine/disable_burst()
-	. = ..()
-	spread = 0
-
-
-//Multiplas rifle
-/obj/item/gun/energy/laser/plasma/scatter
-	name = "multiplas rifle"
-	item_state = "multiplas"
-	icon_state = "multiplas"
-	fire_delay = 3
-	desc = "A modified A3-20 plasma caster built by REPCONN equipped with a multicasting kit that creates multiple weaker clots."
-	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma/scatter)
-	cell_type = /obj/item/stock_parts/cell/ammo/mfc
-
-
 //Alien Blaster
 /obj/item/gun/energy/laser/plasma/pistol/alien
 	name = "alien blaster"
@@ -570,7 +480,7 @@
 	icon_state = "alienblaster"
 	desc = "This weapon is unlike any other you've ever seen before, and appears to be made out of metals not usually found on Earth. It certainly packs a punch, though."
 	w_class = WEIGHT_CLASS_NORMAL
-	weapon_weight = WEAPON_LIGHT
+	weapon_weight = WEAPON_MEDIUM
 	slot_flags = ITEM_SLOT_BELT
 	can_charge = FALSE
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/alien)
@@ -584,7 +494,7 @@
 	icon_state = "gammagun"
 	item_state = "gammagun"
 	w_class = WEIGHT_CLASS_NORMAL
-	weapon_weight = WEAPON_LIGHT
+	weapon_weight = WEAPON_MEDIUM
 	slot_flags = ITEM_SLOT_BELT
 	ammo_type = list(/obj/item/ammo_casing/energy/gammagun)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
@@ -690,9 +600,11 @@
 	slot_flags = null
 	w_class = WEIGHT_CLASS_HUGE
 	custom_materials = null
-	burst_size = 5
+	burst_size = 1
 	burst_shot_delay = 1
-	ranged_attack_speed = CLICK_CD_RAPID
+	automatic = 1
+	autofire_shot_delay = 1.8
+	spread = 6
 	fire_delay = 1
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/weapons/laser.ogg'

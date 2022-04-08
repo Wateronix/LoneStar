@@ -52,6 +52,16 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_BELTS
 
+/datum/crafting_recipe/legholster
+	name = "Leg Holster"
+	result = /obj/item/storage/belt/holster/legholster
+	reqs = list(/obj/item/stack/sheet/leather = 2,
+				/obj/item/stack/sheet/hay = 3)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_BELTS
+
 /datum/crafting_recipe/medolier
 	name = "Medolier"
 	result =  /obj/item/storage/belt/medolier
@@ -91,6 +101,28 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
 	always_available = FALSE
+
+/datum/crafting_recipe/heavysheath
+	name = "Heavy-Duty Sheath"
+	result = /obj/item/storage/belt/sabre/heavy
+	reqs = list(/obj/item/stack/sheet/hay = 1,
+				/obj/item/stack/sheet/leather = 3,
+				/obj/item/stack/crafting/metalparts = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_BELTS
+
+/datum/crafting_recipe/twinsheath
+	name = "Twin Sheath"
+	result = /obj/item/storage/belt/sabre/twin
+	reqs = list(/obj/item/stack/sheet/hay = 1,
+				/obj/item/stack/sheet/leather = 3,
+				/obj/item/stack/crafting/metalparts = 2)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_BELTS
 
 /////////
 //SHOES//
@@ -257,7 +289,18 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
 	always_available = FALSE
+*/
 
+/datum/crafting_recipe/papermask	//Citadel item
+	name = "Paper Mask"
+	result = /obj/item/clothing/mask/paper
+	reqs = list(/obj/item/paper = 20)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING	//F13 category
+
+/*
 /datum/crafting_recipe/hudsunsec
 	name = "Security HUDsunglasses"
 	result = /obj/item/clothing/glasses/hud/security/sunglasses
